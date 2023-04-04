@@ -23,9 +23,9 @@ function App() {
 
   const proveIt = async (e: any) => {
     e.preventDefault();
-    console.log(username)
+    //console.log(username);
     const response = await axios.get(getCallbackUrl + '/' + username)
-    console.log(response);
+    //console.log(response);
     setCallbackId(response.data.callbackId)
     setCallbackUrl(response.data.url);
     setLoading(true)
@@ -57,7 +57,7 @@ function App() {
 
           <input
           onChange={(e) => setUsername(e.target.value)}
-          placeholder="What is your pet's name?"
+          placeholder="Enter Your Gmail ID?"
           value={username}
           className="username-input"
         />
